@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block pageTitle %}User Profile: {{ user.username }}{% endblock %}
+
+{% block content %}
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <h1>Hello, {{ user.username }}!</h1>
+                {% if user.email %}
+                    <p>Email: {{ user.email }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
